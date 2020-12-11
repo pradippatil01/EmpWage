@@ -12,6 +12,7 @@ const MAX_HOURS_IN_MONTH = 100;
 var totalWorkingDays = 0;
 var totalWorkingHours = 0;
 var empDailyWageArr = new Array();
+/* get employee status */
 function getWorkingHours() {
     empCheck = Math.floor(Math.random() * 10) % 3;
     switch (empCheck) {
@@ -26,7 +27,7 @@ function getWorkingHours() {
             break;
     }
 }
-
+/* calculate for month */
 function main() {
     while (totalWorkingDays <= NUM_OF_WORKING_DAYS && totalWorkingHours <= MAX_HOURS_IN_MONTH) {
         totalWorkingDays++;
@@ -43,7 +44,6 @@ function main() {
     console.log("Total wage of month is : " + totalWage);
     console.log(empDailyWageArr.toString());
 }
-
 /* calculate daily wage */
 function calDailyWage(empHrs) {
     let dailyWage = empHrs * WAGE_PER_HOUR;
