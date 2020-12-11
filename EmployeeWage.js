@@ -8,6 +8,7 @@ const FULL_TIME_HOURS = 8;
 const PART_TIME_HOURS = 4;
 const WAGE_PER_HOUR = 20;
 const NUM_OF_WORKING_DAYS = 20;
+const MAX_HOURS_IN_MONTH = 100;
 let workingDays = 1;
 let totalWorkingHours = 0;
 function getWorkingHours() {
@@ -24,11 +25,11 @@ function getWorkingHours() {
             break;
     }
 }
-while (workingDays <= 20) {
+while (workingDays <= NUM_OF_WORKING_DAYS && totalWorkingHours <= MAX_HOURS_IN_MONTH) {
     workingDays++;
     let empHrs = getWorkingHours();
     totalWorkingHours += empHrs;
 }
 totalWage = totalWorkingHours * WAGE_PER_HOUR;
-console.log("Total wage of month is : "+totalWage);
+console.log("Total wage of month is : " + totalWage );
 
