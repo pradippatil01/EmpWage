@@ -25,11 +25,14 @@ function getWorkingHours() {
             break;
     }
 }
-while (workingDays <= NUM_OF_WORKING_DAYS && totalWorkingHours <= MAX_HOURS_IN_MONTH) {
-    workingDays++;
-    let empHrs = getWorkingHours();
-    totalWorkingHours += empHrs;
+function main() {
+    while (workingDays <= NUM_OF_WORKING_DAYS && totalWorkingHours <= MAX_HOURS_IN_MONTH) {
+        workingDays++;
+        let empHrs = getWorkingHours();
+        totalWorkingHours += empHrs;
+    }
+    totalWage = totalWorkingHours * WAGE_PER_HOUR;
+    console.log("Total wage of month is : " + totalWage);
 }
-totalWage = totalWorkingHours * WAGE_PER_HOUR;
-console.log("Total wage of month is : " + totalWage );
 
+main();
