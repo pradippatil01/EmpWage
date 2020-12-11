@@ -13,7 +13,7 @@ var totalWorkingDays = 0;
 var totalWorkingHours = 0;
 var empDailyWageArr = new Array();
 /* get employee status */
-function getWorkingHours() {
+getWorkingHours = () => {
     empCheck = Math.floor(Math.random() * 10) % 3;
     switch (empCheck) {
         case IS_PART_TIME:
@@ -28,7 +28,7 @@ function getWorkingHours() {
     }
 }
 /* calculate for month */
-function main() {
+main = () => {
     while (totalWorkingDays < NUM_OF_WORKING_DAYS && totalWorkingHours <= MAX_HOURS_IN_MONTH) {
         totalWorkingDays++;
         let empHrs = getWorkingHours();
@@ -48,7 +48,7 @@ function main() {
     console.log(empDailyWageArr.toString());
 }
 /* calculate daily wage */
-function calDailyWage(empHrs) {
+calDailyWage = (empHrs) => {
     let dailyWage = empHrs * WAGE_PER_HOUR;
     totalWage += dailyWage;
     return dailyWage;
