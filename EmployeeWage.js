@@ -1,0 +1,1 @@
+console.log("Welcone to employee wage computation");
