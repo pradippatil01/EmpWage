@@ -1,3 +1,11 @@
+/**************************************************************************
+*   Excecution :  1. default Node 
+*   Purpose    : Calculate employee wage
+*   @description 
+*   @author    : Pradip R patil (BridgeLabz)
+*   @file      : EmployeeWage.js
+*   @version   : v14.15.1
+***************************************************************************/
 console.log("Welcone to employee wage computation");
 let empCheck;
 var totalWage = 0;
